@@ -18,7 +18,7 @@ app.use(cookieParser()); //To parse the incoming cookies from req.cookie
 app.use(express.json()); //To parse the incoming request with JSON payloads (from req.body)
 
 app.use("/api/auth", authRoutes);
-app.use("/api/message", messageRoute);
+app.use("/api/messages", messageRoute);
 app.use("/api/users", userRoutes);
 
 // app.get("/", (req, res) => {
@@ -30,4 +30,5 @@ app.listen(PORT, () => {
     connectToMongoDB();
     console.log(`App is listing on port ${PORT}`)
 })
+
 
